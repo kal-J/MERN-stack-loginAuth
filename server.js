@@ -9,7 +9,6 @@ const app = express();
 
 //Body-parser middleware which is integrated in express
 app.use(express.json());
-
 // mongoDB config
 const db = require('./config/keys').mongoURI;
 

@@ -48,6 +48,7 @@ router.post('/register', (req,res) => {
         });
 });
 
+
 // @route POST api/users/login
 // @desc Log in User and return jwt token
 // @access Public
