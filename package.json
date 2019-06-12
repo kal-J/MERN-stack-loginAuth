@@ -31,6 +31,7 @@
     "dependencies": {
         "bcryptjs": "^2.4.3",
         "concurrently": "^4.1.0",
+        "cors": "^2.8.5",
         "express": "^4.17.0",
         "is-empty": "^1.2.0",
         "jsonwebtoken": "^8.5.1",
@@ -38,6 +39,7 @@
         "passport": "^0.4.0",
         "passport-jwt": "^4.0.0",
         "react-redux": "^7.0.3",
+        "redux": "^4.0.1",
         "validator": "^10.11.0"
     },
     "devDependencies": {

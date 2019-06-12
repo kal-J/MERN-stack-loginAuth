@@ -6,7 +6,7 @@ import { SET_CURRENT_USER, USER_LOADING, GET_ERRORS } from './types';
 
 //Register user
 export const registerUser = (userData, history) => (dispatch) => {
-    axios.post('api/users/register', userData)
+    axios.post('http://localhost:5000/api/users/register', userData)
          .then( res => history.push('/login')) //redirect to login page on success
          .catch( err => dispatch({
              type: GET_ERRORS,
@@ -15,8 +15,8 @@ export const registerUser = (userData, history) => (dispatch) => {
 };
 
 // Log in and get user token
-export const loginUser = (userData, history) => (dispatch) => {
-    axios.post('api/users/login', userData)
+export const loginUser = (userData) => (dispatch) => {
+    axios.post('http://localhost:5000/api/users/login', userData)
          .then( res => {
              //save token to localStorage
              const { token } = res.data;
@@ -31,10 +31,7 @@ export const loginUser = (userData, history) => (dispatch) => {
              //set current User
              dispatch(setCurrentUser(decoded));
          })
-         .catch( err => dispatch({
-             type: GET_ERRORS,
-             payload: err.response.data
-         }));
+         
 };
 
 //set logged user

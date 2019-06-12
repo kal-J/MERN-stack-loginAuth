@@ -1,11 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const passport = require('passport');
+const cors = require('cors');
 
 const users = require('./routes/api/users');
 
 //Initialize app with express
 const app = express(); 
+app.use(cors());
 
 //Body-parser middleware which is integrated in express
 app.use(express.json());
